@@ -33,7 +33,7 @@ export const Weather = () => {
   }
   return (
     <div className="relative text-white p-5 md:pb-10">
-      <h1 className=" items-center hidden lg:inline-flex">
+      <h1 className=" items-center hidden md:inline-flex">
         <div className="text-2xl ">
           <IoLocationOutline />
         </div>

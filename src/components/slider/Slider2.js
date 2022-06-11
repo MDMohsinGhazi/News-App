@@ -57,11 +57,11 @@ export const Slider = () => {
         />
         <div className="absolute text-xl bottom-0 text-white bg-black/50  h-full md:h-fit w-full overflow-hidden px-2 py-5 text-left ">
           <h1 className="font-bold text-xl md:text-2xl ">{news[page].title}</h1>
-          <p className="inline">{news[page].description}</p>
+          <p className="md:inline hidden">{news[page].description}</p>
           <a
             href={news[page].url}
             target="_blank"
-            className="text-gray-100 font-semibold hover:text-gray-300"
+            className="text-gray-100 hidden md:block  font-semibold hover:text-gray-300"
           >
             Read more.
           </a>

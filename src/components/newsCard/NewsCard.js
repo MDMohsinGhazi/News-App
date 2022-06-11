@@ -3,7 +3,7 @@ import dog from "./../../assets/dog2.jpg";
 
 export const NewsCard = (props) => {
   const timeStemp = (time) => {
-    const days = new Date(time).getDate() - new Date().getDate();
+    const days = new Date().getDate() - new Date(time).getDate();
     const hours = new Date().getHours() - new Date(time).getHours();
     if (!days) {
       return hours + `${hours > 1 ? "hours" : "hour"}`;
