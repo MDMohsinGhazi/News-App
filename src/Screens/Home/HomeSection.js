@@ -15,9 +15,7 @@ export const HomeSection = () => {
   } = useInfiniteQuery(
     ["Indian"],
     ({ pageParam = 1 }) => {
-      return AxiosInstance.get(
-        `/news/headlines?country=in&pageSize=18&page=${pageParam}`
-      );
+      return AxiosInstance.get(`/news/headlines?pageSize=18&page=${pageParam}`);
     },
     {
       refetchOnWindowFocus: false,

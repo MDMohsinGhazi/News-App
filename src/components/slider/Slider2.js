@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import AxiosInstance from "../../utilities/axios-instance";
 import { useQuery } from "react-query";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { Modal } from "../../utilities/Modal";
@@ -11,9 +11,7 @@ export const Slider = () => {
   const { isLoading, isIdle, isError, error, data } = useQuery(
     "slider",
     () => {
-      return axios.get(
-        `https://newsapi.org/v2/top-headlines?country=in&pageSize=30&page=1&apiKey=a1a9cb8df89c4c68834d3d208c6bc0c4`
-      );
+      return AxiosInstance.get(`/news/headlines?country=in&pageSize=30&page=1`);
     },
     {
       onSuccess: (data) => {

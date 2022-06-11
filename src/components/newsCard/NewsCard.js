@@ -12,19 +12,21 @@ export const NewsCard = (props) => {
     }
   };
   return (
-    <div className="bg-white relative shadow-md justify-center">
+    <div className="bg-white relative shadow-md justify-center ">
       <img
         className="aspect-[4/3] min-h-1/2 w-full overflow-hidden"
         src={props.article.urlToImage || dog}
         alt="news"
       />
       <div className="p-2.5">
-        <h1 className="text-xl font-semibold text-oxfordBlue line-clamp-2">
+        <h1 className="text-xl font-semibold text-oxfordBlue sm:line-clamp-2 line-clamp-none ">
           {props.article.title}
         </h1>
-        <p className="text-lg line-clamp-4 mb-8">{props.article.description}</p>
+        <p className="text-lg line-clamp-none md:line-clamp-5 mb-8">
+          {props.article.description}
+        </p>
         <a
-          className="absolute -bottom-1 py-2 font-bold line-clamp-1 cursor-pointer"
+          className="absolute -bottom-1 py-2 font-bold line-clamp-1  cursor-pointer"
           href={props.article.url}
           target="_blank"
         >
