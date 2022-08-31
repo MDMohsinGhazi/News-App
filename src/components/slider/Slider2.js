@@ -20,7 +20,6 @@ export const Slider = () => {
       refetchOnWindowFocus: false,
     }
   );
-  console.log(page);
 
   if (news === null) {
     return null;
@@ -61,6 +60,7 @@ export const Slider = () => {
           <a
             href={news[page].url}
             target="_blank"
+            rel="noreferrer"
             className="text-gray-100 hidden md:block  font-semibold hover:text-gray-300"
           >
             Read more.

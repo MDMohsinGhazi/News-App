@@ -27,11 +27,15 @@ export const HomeSection = () => {
     return <Modal />;
   }
   if (isError) {
-    return <div>{error.message}</div>;
+    return (
+      <div className="p-4 sm:p-6 md:p-8 -mt-5 min-h-screen">
+        {error.message}
+      </div>
+    );
   }
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 -mt-5">
+    <div className="p-4 sm:p-6 md:p-8 -mt-5 min-h-screen">
       <h1>
         <span className="font-bold text-red-900 text-3xl">|</span>
         <span className="font-semibold text-3xl text-oxfordBlue capitalize">

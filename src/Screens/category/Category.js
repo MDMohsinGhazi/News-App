@@ -28,7 +28,7 @@ export const Category = () => {
   }
 
   return (
-    <div className="px-3 sm:px-5 md:px-7 lg:px-10 py-4">
+    <div className="px-3 sm:px-5 md:px-7 lg:px-10 py-4 min-h-screen">
       <h1>
         <span className="font-bold text-red-900 text-3xl">|</span>
         <span className="font-semibold text-3xl text-oxfordBlue capitalize">

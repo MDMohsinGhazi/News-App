@@ -28,10 +28,12 @@ export const World = () => {
     return <Modal />;
   }
   if (isError) {
-    return <div>{error.message}</div>;
+    return (
+      <div className="px-3 md:px-10 py-4 min-h-screen">{error.message}</div>
+    );
   }
   return (
-    <div className="px-3 md:px-10 py-4 ">
+    <div className="px-3 md:px-10 py-4 min-h-screen">
       <h1>
         <span className="font-bold text-green-800 text-3xl">|</span>
         <span className="font-semibold text-3xl text-oxfordBlue">World</span>

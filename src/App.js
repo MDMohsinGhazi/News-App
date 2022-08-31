@@ -16,17 +16,14 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Navbar />
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="category/:category" element={<Category />} />
             <Route path="world" element={<World />} />
             <Route path="search" element={<SearchResult />} />
           </Routes>
-
           <Footer />
         </BrowserRouter>
-        <ReactQueryDevtools position="bottom-right" initialIsOpen={false} />
       </QueryClientProvider>
     </div>
   );

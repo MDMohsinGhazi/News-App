@@ -13,10 +13,7 @@ export const Dropdown = (props) => {
   document.addEventListener("mousedown", handleClickOutside);
 
   return (
-    <div
-      className="relative text-left w-1/3 sm:w-full"
-      // style={{ color: !category ? "black" : "red" }}
-    >
+    <div className="relative text-left w-1/3 sm:w-full">
       <div className="hover:text-gold inline-flex shadow-xl">
         <button
           className="font-semibold inline-flex"
@@ -38,9 +35,10 @@ export const Dropdown = (props) => {
           opacity: show ? "1" : "0",
         }}
       >
-        {types.map((cat) => {
+        {types.map((cat, index) => {
           return (
             <Link
+              key={index}
               onClick={() => {
                 setShow(false);
                 props.show();

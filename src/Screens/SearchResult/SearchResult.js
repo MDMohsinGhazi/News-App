@@ -22,7 +22,11 @@ export const SearchResult = () => {
     return <Modal />;
   }
   if (isError) {
-    return <div>{error.message}</div>;
+    return (
+      <div className="px-4 sm:px-6 md:px-8 lg:px-10 py-4 min-h-screen">
+        {error.message}
+      </div>
+    );
   }
   if (data.data.articles.length === 0) {
     return <NotFound />;

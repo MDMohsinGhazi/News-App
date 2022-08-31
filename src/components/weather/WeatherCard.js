@@ -8,7 +8,7 @@ export const WeatherCard = () => {
   return (
     <div className="relative">
       <img
-        className="absolute inset-0 rounded-md overflow-hidden h-full w-full"
+        className="absolute inset-0 overflow-hidden h-full w-full"
         src={process.env.PUBLIC_URL + `img/${img}.png`}
         alt="img"
       />
