@@ -16,13 +16,14 @@ export const Weather = () => {
     ["weather"],
     () => {
       return AxiosInstance.get(
-        `/weather?lat${coords.latitude}&lon=${coords.longitude}`
+        `/weather?lat=${coords.latitude}&lon=${coords.longitude}`
       );
     },
     {
       enabled: !!coords,
     }
   );
+  console.log(data);
 
   if (isIdle) {
     return <h1>Ideal..</h1>;
@@ -42,7 +43,7 @@ export const Weather = () => {
         {data?.data.city}
       </h1>
       <div className="md:mt-24">
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
           <div className="text-5xl">
             {Math.floor(data?.data.temp - 273.15)}&#8451;
           </div>

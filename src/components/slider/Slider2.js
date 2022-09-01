@@ -47,7 +47,7 @@ export const Slider = () => {
     );
   }
   return (
-    <div className="relative">
+    <div className="relative col-span-4">
       <div className="aspect-[16/9]">
         <img
           src={news[page].urlToImage ?? process.env.PUBLIC_URL + "img/news.jpg"}
